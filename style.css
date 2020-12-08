@@ -184,7 +184,8 @@ p {
 /* Home */
 #home {
   /* background-color: hsla(200,40%,30%,.4); */
-  background-image: url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"),
+  background-image: 
+  /* url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"), */
     url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
     url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
     url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
@@ -205,12 +206,78 @@ p {
       400px 0;
   }
 }
+
 .home__avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   border: 2px solid var(--color-light-white);
 }
+/* cude */
+@keyframes turn {
+  from { transform: rotate3d(0, 0, 0, 0); }
+  to { transform: rotate3d(1, 1, 1, 360deg); }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 500px;
+  margin: 50px 0px;
+}
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+}
+.cube:hover{
+  animation: turn 5s linear infinite;
+}
+.face {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  border: 1px solid white;
+  font-size: 2rem;
+  transition: transform 500ms;
+}
+
+.front {
+  transform: translateZ(100px);
+}
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  background-color: #2e2e2e36;
+}
+.left {
+  transform: translateX(-100px) rotateY(-90deg);
+  background-color: #2e2e2e36;
+}
+.right {
+  transform: translateX(100px) rotateY(90deg);
+  background-color: #2e2e2e36;
+}
+.top {
+  transform: translateY(-100px) rotateX(90deg);
+  background-color: #2e2e2e36;
+}
+.bottom {
+  transform: translateY(100px) rotateX(-90deg);
+  background-color: #2e2e2e36;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cube {
+    animation: none;
+    transform: rotate3d(1, 1, 0, 45deg);
+  }
+}
+/* cude */
 
 .home__title,
 .home__description {
