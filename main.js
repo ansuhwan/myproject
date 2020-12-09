@@ -1,10 +1,40 @@
 "use strict";
 
+// text move
+//text 옆(오른쪽)으로 움직이기
+let layer1 = document.getElementById("home");
+let layer2 = document.getElementById("about");
+scroll = window.pageYOffset;
+document.addEventListener("scroll", function (e) {
+  let offset = window.pageYOffset;
+  scroll = offset;
+  // layer1.style.width = (100 + scroll/5) + '%'
+  layer1.style.top = -scroll / 5 + "%";
+  layer1.style.position = "absolute";
+  layer1.style.width = "100%";
+  about.style.marginTop = "700px";
+  navbar.style.position="absolute"
+  navbar.style.width = "100%";
+  navbar.style.top = "0px";
+});
+
+//text 위로 움직이기
+/* let text = document.getElementById('text_up');
+scroll = window.pageYOffset;
+document.addEventListener('scroll', function (e){
+  let offset = window.pageYOffset;
+  scroll = offset;
+  // layer2.style.width = (100 + scroll/5) + '%'
+  text.style.top = - scroll/5 + '%';
+  let totaltop = text.style.top;
+}); */
 
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
+  
+  navbar.style.position="fixed"
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
   } else {
@@ -103,9 +133,9 @@ function scrollIntoView(selector) {
 }
 // 색 반전
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  document.documentElement.classList.add("dark")
+  document.documentElement.classList.add("dark");
 }
 
-document.getElementById("toggleTheme").addEventListener("click",() => {
-document.documentElement.classList.toggle("dark")
-})
+document.getElementById("toggleTheme").addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+});
