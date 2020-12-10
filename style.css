@@ -165,13 +165,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  background-color: #f84a4a;
+  color: var(--color-light-white);
+  background-color: var(--color-dark-grey) ;
   margin-top: 10px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 .delay-page-btn:hover{
-  background-color: #d83737;
+  background-color: slategrey;
   transition: all 0.3s ease ;
 }
 .text strong span{

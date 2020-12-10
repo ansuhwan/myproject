@@ -33,7 +33,7 @@ document.addEventListener("scroll",()=>{
 const skills = document.querySelector("#skills");
 window.addEventListener('scroll', scrollEffect);
 function scrollEffect(){
-  if(window.scrollY >= 1100){
+  if(window.scrollY >= 1300){
     skills.style.opacity ="1";
     skills.style.transition = "2s ease-in-out";
   }else{
