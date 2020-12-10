@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- style -->
+    <link rel="stylesheet" href="autotext.css" />
+  </head>
+  <body>
+    <!-- main-section -->
+    <section id="main">
+      <!-- background-img -->
+      <div class="bg">
+        <img src="imgs/bg.webp" />
+      </div>
+      <!-- text -->
+      <div class="text">
+        <strong>안녕하세요 <span class="type"></span></strong>
+        <p>제 포트폴리오 사이트 입니다 HTML, CSS, Javascript를 이용했습니;다</p>
+        <a href="index.html" class="btn">바로가기</a>
+      </div>
+    </section>
+    <!-- type.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- script -->
+    <script>
+      var typed = new Typed(".type", {
+        strings: ["제 이름은", "안수환 입니다","저의 포트폴리오를","봐주셔서 감사합니다"],
+        typeSpeed:100,
+        backSpeed:70,
+        loop:true,
+      });
+    </script>
+  </body>
+</html>

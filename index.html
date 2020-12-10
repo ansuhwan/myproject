@@ -22,6 +22,15 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+    <!-- 처음으로 보여줄 페이지 -->
+    <div class="delay-page">
+      <div class="text">
+        <strong>안녕하세요 <span class="type"></span></strong>
+        <p>제 포트폴리오 사이트 입니다 HTML, CSS, Javascript를 이용했습니다</p>
+        <a href="#" class="delay-page-btn">바로 보기</a>
+      </div>
+
+    </div>
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
@@ -396,5 +405,18 @@
     <button class="arrow-up">
       <i class="fas fa-arrow-up"></i>
     </button>
-  </body>
+
+   
+  </body> 
+  <!-- type.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- script -->
+  <script>
+    var typed = new Typed(".type", {
+      strings: ["제 이름은", "안수환 입니다","저의 포트폴리오를","봐주셔서 감사합니다"],
+      typeSpeed:100,
+      backSpeed:70,
+      loop:true,
+    });
+  </script>
 </html>

@@ -1,5 +1,11 @@
 "use strict";
 
+const delayBtn = document.querySelector(".delay-page-btn");
+
+delayBtn.addEventListener("click", ()=>{
+  const delay1 = document.querySelector(".delay-page");
+  delay1.style.display="none"
+});
 // text move
 //text 옆(오른쪽)으로 움직이기
 /* let layer1 = document.getElementById("home");
@@ -17,7 +23,6 @@ document.addEventListener("scroll", function (e) {
   navbar.style.width = "100%";
   navbar.style.top = "0px";
 }); */
-
 const about = document.getElementById("about");
 document.addEventListener("scroll",()=>{
   let op = 2- (window.pageYOffset / about.offsetHeight);
