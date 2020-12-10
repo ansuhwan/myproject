@@ -2,7 +2,7 @@
 
 // text move
 //text 옆(오른쪽)으로 움직이기
-let layer1 = document.getElementById("home");
+/* let layer1 = document.getElementById("home");
 let layer2 = document.getElementById("about");
 scroll = window.pageYOffset;
 document.addEventListener("scroll", function (e) {
@@ -16,7 +16,27 @@ document.addEventListener("scroll", function (e) {
   navbar.style.position="absolute"
   navbar.style.width = "100%";
   navbar.style.top = "0px";
+}); */
+
+const about = document.getElementById("about");
+document.addEventListener("scroll",()=>{
+  let op = 2- (window.pageYOffset / about.offsetHeight);
+  about.style.opacity = op;
+
 });
+
+const skills = document.querySelector("#skills");
+window.addEventListener('scroll', scrollEffect);
+function scrollEffect(){
+  if(window.scrollY >= 1100){
+    skills.style.opacity ="1";
+    skills.style.transition = "2s ease-in-out";
+  }else{
+    skills.style.opacity ="0";
+
+  }
+}
+scrollEffect();
 
 //text 위로 움직이기
 /* let text = document.getElementById('text_up');

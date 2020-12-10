@@ -198,8 +198,8 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
-  height: 700px;
-  margin-bottom: 700px;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 .home__avatar {
