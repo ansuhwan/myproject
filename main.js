@@ -29,7 +29,8 @@ document.addEventListener("scroll",()=>{
   about.style.opacity = op;
 
 });
-scrollEffect();
+
+
 
 //text 위로 움직이기
 /* let text = document.getElementById('text_up');
