@@ -29,18 +29,6 @@ document.addEventListener("scroll",()=>{
   about.style.opacity = op;
 
 });
-
-const skills = document.querySelector("#skills");
-window.addEventListener('scroll', scrollEffect);
-function scrollEffect(){
-  if(window.scrollY >= 1300){
-    skills.style.opacity ="1";
-    skills.style.transition = "2s ease-in-out";
-  }else{
-    skills.style.opacity ="0";
-
-  }
-}
 scrollEffect();
 
 //text 위로 움직이기

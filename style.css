@@ -1,39 +1,6 @@
+@import "dark.css";
+@import "root.css";
 /* Global */
-:root {
-  /* Color */
-  --color-white: #ffffff;
-  --color-light-white: #eeeeee;
-  --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
-  --color-black: #4d4d4d;
-  --color-dark-grey: #4d4d4d;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
-  --color-blue: #73aace;
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;
-  --color-black: #000000;
-
-  /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
-
-  /* Font weight */
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-regular: 400;
-
-  /* Size */
-  --size-border-radius: 4px;
-
-  /* Annimation */
-  --animation-duration: 300ms;
-}
-
 /* Universal tags */
 * {
   box-sizing: border-box;
@@ -42,42 +9,10 @@ html {
   color: #343434;
   overflow-x: hidden;
 }
-
-html.dark {
-  background: #121212;
-  color: #bbb;
-}
-html.dark h1,
-html.dark h2,
-html.dark h3,
-html.dark li,
-html.dark p,
-html.dark button,
-html.dark #toggleTheme,
-html.dark a {
-  color: var(--color-white);
-}
-html.dark #testimonials,
-html.dark button.selected,
-html.dark #toggleTheme,
-html.dark button {
-  background: rgba(255, 255, 255, 0.1);
-}
-html.dark button:hover {
-  background: #4d4d4d;
-}
-
-html.dark #skills,
-html.dark #navbar.navbar--dark {
-  background: rgba(255, 255, 255, 0.1);
-}
-html.dark .vapour span {
-  background-color: #fff;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
+  background-color: rgb(234,235,239);
 }
 
 a {
@@ -200,7 +135,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: white;
+  color: black;
 }
 
 .navbar__menu {
@@ -232,16 +167,10 @@ p {
 /* Home */
 #home {
   /* background-color: hsla(200,40%,30%,.4); */
-  background-image: 
-  /* url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"), */
-    url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
-    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
-    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
-    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
-
-  background-repeat: repeat-x;
-  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
-  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  background-image: url("imgs/1236.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   animation: 50s para infinite linear;
   padding: 40px;
   padding-top: 120px;
@@ -386,19 +315,24 @@ p {
 .section {
   padding: 50px;
   text-align: center;
-  margin: auto;
 }
 
 .section__container {
   max-width: 1200px;
+  background-color: var(--color-white);
+  padding: 30px;
   margin: auto;
 }
 
 /* About */
+#about{
+  margin-top: 20px;
+  padding: 30px;
+}
 .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: auto;
 }
 
 .major__icon {
@@ -457,7 +391,7 @@ p {
 /* Skill */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: rgb(234,235,239);
 }
 
 .skillset {
@@ -509,6 +443,9 @@ p {
 }
 
 /* Work */
+#work{
+  background-color:rgb(234,235,239) ;
+}
 
 .work__categories {
   margin: 40px;
@@ -524,8 +461,9 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
-  color: var(--color-black);
+  background-color: var(--color-blue);
+  color: var( --color-white);
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 .category__btn.selected .category__count,
@@ -570,7 +508,7 @@ p {
   width: 280px;
   height: 250px;
   margin: 2px;
-  background-color: var(--color-light-white);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .project.invisible {
@@ -649,12 +587,12 @@ p {
 
 .testimonial__speech-bubble {
   padding: 18px;
-  background-color: var(--color-black);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: var(--size-border-radius);
 }
 
 .testimonial__speech-bubble p {
-  color: var(--color-light-grey);
+  color: var(--color-black);
 }
 
 .testimonial__speech-bubble a {
@@ -703,11 +641,14 @@ p {
   pointer-events: none;
   transition: opacity 300ms ease-in;
 }
-#toggleTheme {
+#toggleTheme{
+  pointer-events: auto;
+  opacity: 1;
+}
+.arrow-up {
   bottom: 50px;
   right: 100px;
 }
-#toggleTheme.visible,
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
