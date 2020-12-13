@@ -32,8 +32,13 @@ html.dark a {
 html.dark button:hover {
   background: #4d4d4d;
 }
-
-
+html.dark .project{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html.dark .testimonial__speech-bubble a{
+  color: steelblue;
+  font-weight: 600;
+}
 html.dark .vapour span {
   background-color: #fff;
 }

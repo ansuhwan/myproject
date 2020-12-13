@@ -369,6 +369,10 @@ p {
   display: flex;
   align-items: center;
 }
+.job img{
+  width: 100px;
+  height: 100px;
+}
 
 .job__description {
   margin: 0 16px;
