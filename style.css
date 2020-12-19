@@ -590,13 +590,20 @@ p {
 }
 
 .testimonial__speech-bubble {
+  width: 870px;
+  height: 270px;
   padding: 18px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: var(--size-border-radius);
+  overflow-y: scroll;
+
 }
 
 .testimonial__speech-bubble p {
   color: var(--color-black);
+}
+.testimonial__speech-bubble p img {
+ width: 800px; 
 }
 
 .testimonial__speech-bubble a {
@@ -755,6 +762,7 @@ p {
 
   .testimonial__speech-bubble {
     order: 1;
+    width: 80%;
   }
 
   #toggleTheme,
