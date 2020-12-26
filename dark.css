@@ -26,7 +26,8 @@ html.dark .fa-code,
 html.dark p,
 html.dark button,
 html.dark #toggleTheme,
-html.dark a {
+html.dark a,
+html.dark .major__title, .major__description {
   color: var(--color-white);
 }
 html.dark button:hover {
@@ -42,13 +43,5 @@ html.dark .testimonial__speech-bubble a{
 html.dark .vapour span {
   background-color: #fff;
 }
-html.dark #home {
-  /* background-color: hsla(200,40%,30%,.4); */
-  background-image: url("imgs/1235.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  height: 100vh;
-  background-attachment: fixed;
+html.dark #home canvas {
 }
