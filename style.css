@@ -1,6 +1,7 @@
 @import "dark.css";
 @import "root.css";
 @import "3d.css";
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
 /* Global */
 /* Universal tags */
 * {
@@ -11,9 +12,9 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'NanumSquare', sans-serif;
   margin: 0;
-  background-color: rgb(234,235,239);
+  background-color: white;
 }
 
 a {
@@ -42,7 +43,6 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0px;
 }
 
 h2 {
@@ -112,7 +112,7 @@ p {
   transition: all 0.3s ease ;
 }
 .text strong span{
-  color: salmon;
+  color: rgb(0, 153, 255);
 }
 /* Navbar */
 #navbar {
@@ -170,7 +170,7 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
-  height: 700px;
+  height: 100vh;
   border: 1px solid #fff;
   border-top: none;
 }
@@ -309,14 +309,14 @@ p {
 }
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 5px;
   text-align: center;
 }
 
 .section__container {
   max-width: 1200px;
   background-color: var(--color-white);
-  padding: 30px;
+  padding: 10px;
   margin: auto;
 }
 
@@ -389,11 +389,6 @@ p {
 }
 
 /* Skill */
-
-#skills {
-  background-color: rgb(234,235,239);
-}
-
 .skillset {
   display: flex;
   background-color: var(--color-light-grey);
@@ -443,10 +438,6 @@ p {
 }
 
 /* Work */
-#work{
-  background-color:rgb(234,235,239) ;
-}
-
 .work__categories {
   margin: 40px;
 }
@@ -558,9 +549,6 @@ p {
 }
 
 /* Testimonial */
-#testimonials {
-  background-color: var(--color-light-white);
-}
 
 .testimonials {
   margin: 40px;
